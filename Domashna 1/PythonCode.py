@@ -6,7 +6,6 @@ import time
 import locale
 import os
 
-# Set locale for formatting
 locale.setlocale(locale.LC_ALL, 'mk_MK.UTF-8')
 
 def date_ranges(start_date, end_date, days=364):
@@ -101,24 +100,21 @@ def format_value(x):
         return locale.format_string('%d', int(x.replace('.', '')), grouping=True)
     return x
 
-# New function to store last run date
 def save_last_run_date(date):
     with open("last_run_date.txt", "w") as file:
         file.write(date)
 
-# New function to load last run date
 def load_last_run_date():
     if os.path.exists("last_run_date.txt"):
         with open("last_run_date.txt", "r") as file:
             return file.read().strip()
     return None
 
-# Main Process
-start_time = time.time()  # Start timer
+start_time = time.time()  
 
-# Load the last run date or set default start date
+
 last_run_date = load_last_run_date()
-start_date = last_run_date if last_run_date else "03.11.2014"  # Default start date
+start_date = last_run_date if last_run_date else "03.11.2014"  
 
 end_date = datetime.today().strftime("%d.%m.%Y")
 symbols = get_all_symbols()
@@ -144,9 +140,8 @@ for symbol in symbols:
 if all_data:
     save_data(all_data, existing_df)
 
-# Save the current date as the last run date
 save_last_run_date(datetime.today().strftime("%d.%m.%Y"))
 
-end_time = time.time()  # End timer
-execution_time = end_time - start_time  # Calculate execution time
+end_time = time.time()  
+execution_time = end_time - start_time  
 print(f"Execution time: {execution_time:.2f} seconds")
