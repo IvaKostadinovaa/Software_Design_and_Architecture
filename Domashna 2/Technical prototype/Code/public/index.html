@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Price Analysis</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+</head>
+<body>
+<header>
+    <h1>Stock Price Analysis App</h1>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showPage('home')">Home</a></li>
+            <li><a href="#analysis" onclick="showPage('analysis')">Analysis</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <!-- Home Page -->
+    <section id="home" class="page">
+        <h2>WELCOME</h2>
+        <p>Select an issuer to view details or analyze the market.</p>
+
+        <table id="companyTable">
+            <thead>
+            <tr>
+                <th>Issuers</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Company rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div id="pagination">
+            <!-- Pagination buttons will be dynamically inserted here -->
+        </div>
+
+        <img src="pic2.avif" alt="Stock Market" class="home-image">
+    </section>
+
+    <!-- Analysis Page with Stock Chart -->
+    <section id="analysis" class="page hidden">
+        <h2>Stock Price Analysis</h2>
+        <p>This is a graph showing the latest price of all companies.</p>
+        <canvas id="analysisChart" width="600" height="400"></canvas>
+    </section>
+
+    <!-- Company Details Page -->
+    <section id="details" class="page hidden">
+        <h2>Company Details</h2>
+        <canvas id="companyChart" width="600" height="300"></canvas>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Macedonian Stock Exchange Analysis</p>
+</footer>
+<script src="script.js" defer></script> <!-- Link to JavaScript -->
+</body>
+</html>
