@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4643e62d-888b-495b-851e-eb7b5fbf0df1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodyActiveAccount">
+    <option name="activeAccountId" value="VXNlcjozMDE4NzM=" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/venv/Lib/site-packages/pandas/io/sql.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2qjPSsoxreAQLQMqfQ7LsfaNMfr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.stockRoutes.js.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.indicators.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sql.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivako/OneDrive/Desktop/dians-2_LATEST&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/ivako/AppData/Roaming/JetBrains/IntelliJIdea2024.2/node/versions/22.12.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ivako\OneDrive\Desktop\dians-2_LATEST\dians-2\public" />
+      <recent name="C:\Users\ivako\OneDrive\Desktop\dians-2_LATEST\dians-2\technical - analysis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ivako\OneDrive\Desktop\iva-dians\dians-2\technical - analysis" />
+      <recent name="C:\Users\ivako\OneDrive\Desktop\iva-dians\dians-2\public" />
+      <recent name="C:\Users\ivako\OneDrive\Desktop\dians-2_LATEST\dians-2\public" />
+      <recent name="C:\Users\ivako\OneDrive\Desktop\dians-2_LATEST\dians-2\technical - analysis" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.227" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.227" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4643e62d-888b-495b-851e-eb7b5fbf0df1" name="Changes" comment="" />
+      <created>1735173014105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735173014105</updated>
+      <workItem from="1735173015171" duration="1441000" />
+      <workItem from="1735174481604" duration="2443000" />
+      <workItem from="1735177367800" duration="605000" />
+      <workItem from="1735212339981" duration="440000" />
+      <workItem from="1735212794317" duration="4155000" />
+      <workItem from="1735220670969" duration="4569000" />
+      <workItem from="1735231808532" duration="618000" />
+      <workItem from="1735232528374" duration="1135000" />
+      <workItem from="1735233686653" duration="21339000" />
+      <workItem from="1735298533935" duration="2708000" />
+      <workItem from="1735305653484" duration="4860000" />
+      <workItem from="1735316359390" duration="3921000" />
+      <workItem from="1735333864346" duration="2329000" />
+      <workItem from="1735337309436" duration="2422000" />
+      <workItem from="1735351111369" duration="2810000" />
+      <workItem from="1735417922274" duration="115000" />
+      <workItem from="1735418262981" duration="683000" />
+      <workItem from="1735419370644" duration="480000" />
+      <workItem from="1735419945436" duration="69000" />
+      <workItem from="1735420802638" duration="330000" />
+      <workItem from="1735421173463" duration="4017000" />
+      <workItem from="1735430244331" duration="1230000" />
+      <workItem from="1735431531284" duration="7311000" />
+      <workItem from="1735489878734" duration="2149000" />
+      <workItem from="1735492740334" duration="9657000" />
+      <workItem from="1735508485114" duration="93000" />
+      <workItem from="1735508665949" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dians_2_LATEST$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1735214719672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dians-2/analysis" />
+    <SUITE FILE_PATH="coverage/dians_2_LATEST$sql.coverage" NAME="sql Coverage Results" MODIFIED="1735220635157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Lib/site-packages/pandas/io" />
+    <SUITE FILE_PATH="coverage/dians_2_LATEST$indicators.coverage" NAME="indicators Coverage Results" MODIFIED="1735223622061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dians-2/technical - analysis" />
+  </component>
+</project>
