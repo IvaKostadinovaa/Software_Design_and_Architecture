@@ -1,0 +1,175 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* This will push the footer to the bottom */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #303035;
+}
+
+/* Header Styles */
+header {
+    background: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #333; ;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.page {
+    display: none;
+}
+
+.page:not(.hidden) {
+    display: block;
+}
+
+/* Table Styles */
+#companyTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#companyTable th,
+#companyTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#pagination,
+#analysisPagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#pagination button,
+#analysisPagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #303035;
+    color: white;
+    cursor: pointer;
+}
+
+#pagination button:disabled,
+#analysisPagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Image Styles */
+.home-image {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size: 12px;
+    color: #333;
+    border-top: 2px solid #ccc;
+}
+
+/* Stock Data Table Styles */
+#analysisTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#analysisTable th,
+#analysisTable td {
+    border: 2px solid #ccc;
+    padding: 15px;
+    text-align: left;
+}
+
+#analysisTable th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#analysisTable td {
+    font-size: 14px;
+}
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+canvas {
+    margin: 10px;
+}
