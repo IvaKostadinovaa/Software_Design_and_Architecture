@@ -312,7 +312,7 @@ def fetch_data(issuer_code):
         .str.replace(',', '.', regex=False) \
         .astype(float)
 
-    df = df.resample('W').mean()  # 'W' for weekly, 'M' for monthly
+    df = df.resample('W').mean()  
 
     df.dropna(inplace=True)
 
@@ -329,7 +329,7 @@ def train_lstm(df):
     val_data = scaled_data[train_size:]
 
     def create_sequences(data, sequence_length=50):
-        if len(data) <= sequence_length:  # Ensure there is enough data
+        if len(data) <= sequence_length:  
             return np.empty((0, sequence_length, 1)), np.empty((0,))
 
         X, y = [], []
@@ -339,7 +339,7 @@ def train_lstm(df):
         X = np.array(X)
         y = np.array(y)
 
-        X = X.reshape((X.shape[0], X.shape[1], 1))  # 1 feature (price)
+        X = X.reshape((X.shape[0], X.shape[1], 1)) 
 
         return X, y
 
@@ -377,7 +377,7 @@ def predict_and_display(issuer_code):
 
     model, scaler, sequence_length = train_lstm(df)
 
-    scaled_data = scaler.fit_transform(df.values.reshape(-1, 1))  # Ensure proper scaling
+    scaled_data = scaler.fit_transform(df.values.reshape(-1, 1))  
     X_test, y_test = [], []
     for i in range(sequence_length, len(scaled_data)):
         X_test.append(scaled_data[i - sequence_length:i])
@@ -385,8 +385,8 @@ def predict_and_display(issuer_code):
     X_test, y_test = np.array(X_test), np.array(y_test)
 
     predictions = model.predict(X_test)
-    predictions = scaler.inverse_transform(predictions)  # Rescale predictions
-    y_test = scaler.inverse_transform(y_test)  # Rescale actual values
+    predictions = scaler.inverse_transform(predictions)  
+    y_test = scaler.inverse_transform(y_test)  
 
     prediction_dates = df.index[-len(predictions):]
     y_test = y_test[-len(predictions):]
