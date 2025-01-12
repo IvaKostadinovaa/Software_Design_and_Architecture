@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issuer Details - {{ issuer_code }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <h1>Stock Price Analysis App</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+        </ul>
+    </nav>
+    </header>
+
+<main class="container my-5">
+    <h2 class="text-center">Details for Issuer: {{ issuer_code }}</h2>
+
+    <div class="mt-5">
+        <h3>Technical Analysis</h3>
+        <iframe src="/issuer/{{ issuer_code }}/graph" class="w-100 border rounded"></iframe>
+    </div>
+
+    <div class="mt-5 text-center">
+        <h3>LSTM Stock Price Prediction</h3>
+        <p>Below are the predicted stock prices based on historical trends for the issuer.</p>
+        <h4 class="text-success">Predicted Next Price: {{ predicted_price }}</h4>
+        <div>
+            {{ graph_html|safe }}
+        </div>
+        <form action="/issuer/{{ issuer_code }}/predict" method="get" class="mt-4">
+            <button type="submit" class="btn btn-primary">Generate Predictions</button>
+        </form>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-3 border-top">
+    <p>&copy; 2024 Macedonian Stock Exchange Analysis</p>
+</footer>
+</body>
+</html>

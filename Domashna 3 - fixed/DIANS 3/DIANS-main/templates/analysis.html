@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <h1>Stock Price Analysis App</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+        </ul>
+    </nav>
+    </header>
+
+
+    <div class="content container mt-4">
+        <h2 class="text-center">Stock Data Analysis</h2>
+
+
+        <div class="filter-section mt-4 mb-5">
+            <form method="get" action="/analysis" class="d-flex justify-content-center">
+                <div class="input-group w-50">
+                    <input type="text" id="issuer" name="issuer" class="form-control" placeholder="Enter Issuer Code" value="{{ request.args.get('issuer', '') }}">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <a href="/analysis" class="btn btn-secondary">Reset</a>
+                </div>
+            </form>
+        </div>
+
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Issuer Code</th>
+                    <th>Date</th>
+                    <th>Last Transaction Price</th>
+                    <th>Max Price</th>
+                    <th>Min Price</th>
+                    <th>Average Price</th>
+                    <th>Turnover in BEST (Denars)</th>
+                    <th>Purchased Turnover in BEST (Denars)</th>
+                    <th>Quantity</th>
+                    <th>Other Turnover in BEST (Denars)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in stock_data %}
+                <tr>
+                    <td>{{ data.Код_на_издавач }}</td>
+                    <td>{{ data.Датум }}</td>
+                    <td>{{ data.Цена_на_последна_трансакција }}</td>
+                    <td>{{ data.Макс }}</td>
+                    <td>{{ data.Мин }}</td>
+                    <td>{{ data.Просечна_цена }}</td>
+                    <td>{{ data.Промет_во_БЕСТ_во_денари }}</td>
+                    <td>{{ data.Купен_промет_во_денари }}</td>
+                    <td>{{ data.Количина }}</td>
+                    <td>{{ data.Промет_во_Бест_во_денари_друга }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <div class="pagination-container mt-4">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    {% if page > 1 %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('analysis', page=page-1, issuer=request.args.get('issuer', '')) }}" aria-label="Previous">&laquo;</a>
+                    </li>
+                    {% endif %}
+
+                    {% for p in range(max(1, page-2), min(total_pages+1, page+3)) %}
+                    <li class="page-item {% if p == page %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('analysis', page=p, issuer=request.args.get('issuer', '')) }}">{{ p }}</a>
+                    </li>
+                    {% endfor %}
+
+                    {% if page < total_pages %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('analysis', page=page+1, issuer=request.args.get('issuer', '')) }}" aria-label="Next">&raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <span>&copy; 2024 Macedonian Stock Exchange Analysis</span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
