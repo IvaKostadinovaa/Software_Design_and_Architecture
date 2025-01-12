@@ -1,4 +1,0 @@
-Flask
-pandas
-sqlite3
-plotly
