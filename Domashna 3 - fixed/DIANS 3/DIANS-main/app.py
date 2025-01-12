@@ -92,7 +92,7 @@ def analysis():
 
     issuer = request.args.get('issuer', default='', type=str).strip()
     page = request.args.get('page', default=1, type=int)
-    limit = 10  # Rows per page
+    limit = 10  
 
     conn = sqlite3.connect('stock_data.db')
     cursor = conn.cursor()
@@ -370,7 +370,7 @@ def train_lstm(df):
 
 @app.route('/issuer/<issuer_code>/predict', methods=['GET'])
 def predict_and_display(issuer_code):
-    # Fetch historical data
+
     df = fetch_data(issuer_code)
     if len(df) < 100:
         return f"<h3>Not enough data to train the model for {issuer_code}. Please add more historical data.</h3>"
