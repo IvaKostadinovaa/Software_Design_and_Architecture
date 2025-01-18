@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  main_app:
+    build:
+      context: ./Dians
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./Dians:/app
+    depends_on:
+      - prediction_service
+      - strategy_service
+
+  prediction_service:
+    build:
+      context: ./prediction_service
+    ports:
+      - "5002:5002"
+    volumes:
+      - ./prediction_service:/app
+
+  strategy_service:
+    build:
+      context: ./strategy_service
+    ports:
+      - "5003:5003"
+    volumes:
+      - ./strategy_service:/app
