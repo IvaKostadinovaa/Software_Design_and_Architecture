@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issuer Details - {{ issuer_code }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <h1>Stock Price Analysis App</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/analysis">Analysis</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container my-5">
+    <h2 class="text-center">Details for Issuer: {{ issuer_code }}</h2>
+
+    <!-- Technical Analysis Section -->
+    <div class="mt-5">
+        <h3>Technical Analysis</h3>
+
+        <!-- Strategy Selection Buttons -->
+        <div class="d-flex justify-content-center gap-3 mb-3">
+            <!-- RSI Strategy -->
+            <form action="/issuer/{{ issuer_code }}/graph" method="GET" target="analysisFrame">
+                <input type="hidden" name="strategy" value="rsi">
+                <button type="submit" class="btn btn-primary">RSI Only</button>
+            </form>
+
+            <!-- MACD Strategy -->
+            <form action="/issuer/{{ issuer_code }}/graph" method="GET" target="analysisFrame">
+                <input type="hidden" name="strategy" value="macd">
+                <button type="submit" class="btn btn-dark">MACD Only</button>
+            </form>
+
+            <!-- ADX Strategy -->
+            <form action="/issuer/{{ issuer_code }}/graph" method="GET" target="analysisFrame">
+                <input type="hidden" name="strategy" value="adx">
+                <button type="submit" class="btn btn-info">ADX Only</button>
+            </form>
+
+            <!-- CCI Strategy -->
+            <form action="/issuer/{{ issuer_code }}/graph" method="GET" target="analysisFrame">
+                <input type="hidden" name="strategy" value="cci">
+                <button type="submit" class="btn btn-warning">CCI Only</button>
+            </form>
+
+            <!-- Full Indicator Strategy -->
+            <form action="/issuer/{{ issuer_code }}/graph" method="GET" target="analysisFrame">
+                <input type="hidden" name="strategy" value="full">
+                <button type="submit" class="btn btn-secondary">Full Strategy</button>
+            </form>
+        </div>
+
+
+        <!-- Iframe to load whichever strategy is chosen. -->
+        <iframe
+            name="analysisFrame"
+            src="/issuer/{{ issuer_code }}/graph"
+            class="w-100 border rounded"
+            style="height:600px;">
+        </iframe>
+    </div>
+
+    <!-- LSTM Prediction Section -->
+    <div class="mt-5 text-center">
+        <h3>LSTM Stock Price Prediction</h3>
+        <p>Below are the predicted stock prices based on historical trends for the issuer.</p>
+        <h4 class="text-success">Predicted Next Price: {{ predicted_price }}</h4>
+        <div>
+            {{ graph_html|safe }}
+        </div>
+        <form action="/issuer/{{ issuer_code }}/predict" method="get" class="mt-4">
+            <button type="submit" class="btn btn-primary">Generate Predictions</button>
+        </form>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-3 border-top">
+    <p>&copy; 2024 Macedonian Stock Exchange Analysis</p>
+</footer>
+</body>
+</html>

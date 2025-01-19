@@ -1,5 +1,3 @@
-# services/prediction_service.py
-
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import Sequential

@@ -7,7 +7,7 @@ import ta
 
 class AnalysisStrategy(ABC):
     """
-    Abstract base class for different technical analysis strategies.
+    Abstract base class for different technical strategies strategies.
     Each strategy must implement 'perform_analysis(df)' which:
       1) Cleans the data (numeric conversions, etc.).
       2) Calculates any needed indicators.
